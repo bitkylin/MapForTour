@@ -1,0 +1,2 @@
+# BaiduMapLocation
+本地BaiduMapTwo项目，使用百度地图SDK同时实现定位和鹰眼轨迹
