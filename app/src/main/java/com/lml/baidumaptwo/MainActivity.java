@@ -1,5 +1,9 @@
 package com.lml.baidumaptwo;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,6 +38,7 @@ import com.baidu.trace.OnStopTraceListener;
 import com.baidu.trace.Trace;
 
 public class MainActivity extends AppCompatActivity {
+    final private int REQUEST_CODE_ASK_PERMISSIONS = 521;
     MapView mMapView = null;
     TextView mapMessageShow;
     BaiduMap baiduMap;
@@ -66,6 +71,14 @@ public class MainActivity extends AppCompatActivity {
         keyInCoordinateFromBaidu = (CheckBox) findViewById(R.id.keyInCoordinateFromBaidu);
         editTextLatitude = (EditText) findViewById(R.id.editTextLatitude);
         editTextLongitude = (EditText) findViewById(R.id.editTextLongitude);
+        //程序运行之前首先申请权限
+        requestPermissionForLocation();
+        //地图的初始化
+        mapInitialization();
+
+    }
+
+    private void mapInitialization() {
         //自定义全局信息类
         mapDeviceMessage = new MapDeviceMessage();
 
@@ -186,6 +199,16 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void requestPermissionForLocation() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            int ownPermission = checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION);
+            if (ownPermission != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                        REQUEST_CODE_ASK_PERMISSIONS);
+            }
+        }
+    }
+
     private void initLocation() {
         LocationClientOption option = new LocationClientOption();
         option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);//可选，默认高精度，设置定位模式，高精度，低功耗，仅设备
@@ -252,6 +275,20 @@ public class MainActivity extends AppCompatActivity {
         };
         //停止轨迹服务
         lbsTraceClient.stopTrace(trace, stopTraceListener);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        Log.d("lml", "onRequestPermissionsResult; requestCode:" + requestCode + "permissions" + permissions[0] + "grantResults" + grantResults[0]);
+        if (requestCode == REQUEST_CODE_ASK_PERMISSIONS) {
+           Log.d("lml", "定位权限请求回调");
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Log.d("lml", "定位权限允许");
+            }else if(grantResults[0] == PackageManager.PERMISSION_DENIED){
+                Log.d("lml", "定位权限拒绝");
+            }
+        }
     }
 
     public class MyLocationListener implements BDLocationListener {
