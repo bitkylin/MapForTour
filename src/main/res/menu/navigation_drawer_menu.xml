@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="定位信息">
+        <menu>
+            <item
+                android:id="@+id/NavigationViewItemLongitude"
+                android:title="经度" />
+            <item
+                android:id="@+id/NavigationViewItemLatitude"
+                android:title="纬度" />
+            <item
+                android:id="@+id/NavigationViewItemRadius"
+                android:title="精度" />
+            <item
+                android:id="@+id/NavigationViewItemLocateMode"
+                android:title="定位模式" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/NavigationViewItemadmin"
+        android:title="管理员功能"
+        android:visible="false">
+        <menu>
+            <item
+                android:id="@+id/NavigationViewItemTrackQuery"
+                android:icon="@mipmap/navigationview_item_trackquery"
+                android:title="轨迹查询" />
+            <item
+                android:id="@+id/NavigationViewItemTimeStart"
+                android:title="设置起始查询时间" />
+            <item
+                android:id="@+id/NavigationViewItemTimeEnd"
+                android:title="设置终止查询时间" />
+            <item
+                android:id="@+id/NavigationViewItemGeoFence"
+                android:icon="@mipmap/navigationview_item_geofence"
+                android:title="围栏报警" />
+        </menu>
+    </item>
+</menu>

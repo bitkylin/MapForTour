@@ -1,0 +1,35 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!--以下是基础主题-->
+    <style name="BitLightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+    <!--以下用于toolbar的按钮Overflow以及侧划菜单汉堡/箭头图标设置，此两图标均设为白色-->
+    <style name="BitLightTheme.menuOverflowAndDrawerArrow">
+        <!--按钮Overflow-->
+        <item name="actionOverflowButtonStyle">@style/ActionButton.Overflow.ZhiHu</item>
+        <!--汉堡/箭头图标-->
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowToggle</item>
+    </style>
+    <!--按钮Overflow颜色设为白色-->
+    <style name="ActionButton.Overflow.ZhiHu" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@mipmap/menu_toolbar_ic_more_overflow</item>
+    </style>
+    <!-- 箭头颜色设为白色 -->
+    <style name="AppTheme.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <!--以下用于splash页面-->
+    <style name="BitLightTheme.TranslucentNavigation">
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+</resources>

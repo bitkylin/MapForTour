@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuToolbarItemTrackHistoryStatus"
+        android:icon="@mipmap/menu_toolbar_ic_track_off"
+        android:title="轨迹状态"
+        app:showAsAction="always" />
+   <item
+        android:id="@+id/menuToolbarItemGeoFenceStatus"
+        android:icon="@mipmap/menu_toolbar_ic_geofence_off"
+        android:title="围栏未开启"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menuToolbarItemNotification"
+        android:icon="@mipmap/menu_toolbar_ic_notifications_on"
+        android:title="通知"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menuToolbarItemSettings"
+        android:orderInCategory="100"
+        android:title="设置"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menuToolbarItemAbout"
+        android:orderInCategory="101"
+        android:title="关于"
+        app:showAsAction="never" />
+</menu>
