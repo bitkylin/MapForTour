@@ -1,3 +1,9 @@
+# 基于百度地图 SDK 的多人地图 Android 客户端
+
+[![GitHub stars](https://img.shields.io/github/stars/bitkylin/MapForTour.svg)](https://github.com/bitkylin/MapForTour/stargazers)
+[![GitHub wiki](https://img.shields.io/badge/publish-Wiki-brightgreen.svg)](https://github.com/bitkylin/MapForTour/wiki)
+[![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](https://github.com/bitkylin/MapForTour/blob/master/LICENSE)
+
 ## 项目简介
 
 Android 手机客户端，基于百度地图 SDK 实现，本项目已实现如下功能：
