@@ -2,8 +2,9 @@ package cc.bitlight.mapfour.maplistener;
 
 import android.util.Log;
 
-import com.baidu.trace.OnEntityListener;
-import com.baidu.trace.TraceLocation;
+import com.baidu.trace.api.entity.OnEntityListener;
+import com.baidu.trace.model.TraceLocation;
+
 
 public class MyOnEntityListener extends OnEntityListener {
     public MyOnEntityListener() {

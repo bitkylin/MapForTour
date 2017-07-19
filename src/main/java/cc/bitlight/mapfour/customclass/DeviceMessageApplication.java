@@ -8,7 +8,7 @@ import com.baidu.location.BDLocation;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.radar.RadarNearbyInfo;
 import com.baidu.mapapi.radar.RadarNearbyResult;
-import com.baidu.trace.TraceLocation;
+import com.baidu.trace.model.TraceLocation;
 
 import java.util.ArrayList;
 import java.util.Date;
