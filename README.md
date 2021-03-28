@@ -22,11 +22,11 @@ Android 手机客户端，基于百度地图 SDK 实现，本项目已实现如�
 
 **第十一届中国研究生电子设计竞赛华南赛区二等奖**
 
-参赛并获奖的作品视频展示已上传至优酷，请点击观看：
+参赛并获奖的作品视频展示已上传至B站，请点击观看：
 
-[![中国研究生电子设计竞赛 - 华南赛区二等奖](./mdphoto/1.jpg)](http://v.youku.com/v_show/id_XMjkwMjk5NDgxNg==.html)
+[![中国研究生电子设计竞赛 - 华南赛区二等奖](./mdphoto/1.jpg)](https://www.bilibili.com/video/BV1T5411N7FH/)
 
-[中国研究生电子设计竞赛 - 华南赛区二等奖 - 自助出行用户安全系统](http://v.youku.com/v_show/id_XMjkwMjk5NDgxNg==.html)
+[中国研究生电子设计竞赛 - 华南赛区二等奖 - 基于百度地图 SDK 的多人地图 Android 客户端](https://www.bilibili.com/video/BV1T5411N7FH/)
 
 ## 运行说明
 
